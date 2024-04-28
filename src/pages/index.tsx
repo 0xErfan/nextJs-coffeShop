@@ -1,8 +1,20 @@
-export default function Home() {
+import Footer from "@/components/modules/footer/Footer";
+import Navbar from "@/components/modules/navbar/Navbar";
+import Articles from "@/components/templates/index/articles/Articles";
+import Banner from "@/components/templates/index/banner/Banner";
+import Latest from "@/components/templates/index/latest/Latest";
+import Promote from "@/components/templates/index/promote/Promote";
+
+export default async function Home() {
 
     return (
         <>
-            <div className="text-red-600 font-bold text-center flex items-center justify-center">hi im erfan and im here to try the things i learned from the nextjs and maybe build a project with ya</div>
+            <Navbar isLogin={"user" ? true : false} />
+            <Banner />
+            {/* <Latest products={JSON.parse(JSON.stringify(latestProducts))} /> */}
+            <Promote />
+            <Articles />
+            <Footer />
         </>
-    )
+    );
 }
