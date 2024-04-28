@@ -4,45 +4,20 @@ import { ImReply } from "react-icons/im";
 import { FaComments, FaHeart, FaShoppingBag, FaUsers } from "react-icons/fa";
 import { MdOutlineAttachMoney } from "react-icons/md";
 import { MdSms, MdLogout } from "react-icons/md";
-import { usePathname, useRouter } from "next/navigation";
 import { TbListDetails } from "react-icons/tb";
 import Link from "next/link";
-import swal from "sweetalert";
 
 const Sidebar = () => {
-  const path = usePathname();
-  const router = useRouter();
 
-  const logoutHandler = () => {
-    swal({
-      title: "آیا از خروج اطمینان دارید؟",
-      icon: "warning",
-      buttons: ["نه", "آره"],
-    }).then(async (result) => {
-      if (result) {
-        const res = await fetch("/api/auth/signout", {
-          method: "POST",
-        });
+  const logoutHandler = () => {};
 
-        if (res.status === 200) {
-          swal({
-            title: "با موفقیت از اکانت خارج شدین",
-            icon: "success",
-            buttons: "فهمیدم",
-          }).then((result) => {
-            router.replace("/");
-          });
-        }
-      }
-    });
-  };
   return (
     <aside className={styles.sidebar}>
       <div className={styles.sidebar_header}>
         <p>خوش اومدی شاهین عزیز</p>
       </div>
       <ul className={styles.sidebar_main}>
-        {path.includes("/p-user") ? (
+        {"path.includes(/p-user)" ? (
           <>
             <Link href={"/p-user"} className={styles.sidebar_link_active}>
               <ImReply />
