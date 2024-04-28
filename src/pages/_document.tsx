@@ -1,13 +1,10 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import "./globals.css";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Document() {
   return (
     <Html lang="fa">
       <Head />
-      <body className={inter.className}>
+      <body>
         <Main />
         <NextScript />
       </body>
