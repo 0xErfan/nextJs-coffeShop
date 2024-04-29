@@ -1,4 +1,4 @@
-"use client";
+
 import styles from "./sidebar.module.css";
 import { ImReply } from "react-icons/im";
 import { FaComments, FaHeart, FaShoppingBag, FaUsers } from "react-icons/fa";

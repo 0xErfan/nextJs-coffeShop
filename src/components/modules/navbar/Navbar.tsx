@@ -1,4 +1,4 @@
-"use client";
+
 import styles from "./Nabvar.module.css";
 import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
