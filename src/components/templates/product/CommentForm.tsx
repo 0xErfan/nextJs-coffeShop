@@ -13,8 +13,6 @@ const CommentForm = ({ productID }: { productID: number }) => {
 
   const setCommentScore = () => { };
 
-  const submitComment = async () => { };
-
   return (
     <div className={styles.form}>
       <p className={styles.title}>دیدگاه خود را بنویسید</p>
@@ -83,7 +81,7 @@ const CommentForm = ({ productID }: { productID: number }) => {
           می‌نویسم.
         </p>
       </div>
-      <button onClick={submitComment}>ثبت</button>
+      <button>ثبت</button>
     </div>
   );
 };

@@ -37,7 +37,7 @@ const Tabs = ({ product }: detailProps) => {
               onClick={() => setTab("comments")}
             >
               نظرات (
-              {product.comments.filter((comment) => comment.isAccept).length})
+              {12})
             </button>
           </li>
         </ul>
@@ -50,7 +50,7 @@ const Tabs = ({ product }: detailProps) => {
             )}
             {tab == "comments" && (
               <Comments
-                productID={product._id}
+                productID={12} // won't be static later
                 comments={JSON.parse(JSON.stringify(product.comments))}
               />
             )}

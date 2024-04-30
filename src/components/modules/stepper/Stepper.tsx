@@ -8,11 +8,11 @@ const Stepper = ({ step }: { step: string }) => {
 
         <div className={styles.stepper_bg}>
             <div className={styles.stepper}>
-                <Link className={step == "cart" && styles.active_step} href={"/cart"}>سبد خرید</Link>
+                <Link className={"" && styles.active_step} href={"/cart"}>سبد خرید</Link>
                 <FaArrowLeftLong />
                 {step === "checkout" || step === "complete" ? (
                     <Link
-                        className={step == "checkout" && styles.active_step}
+                        className={"" && styles.active_step}
                         href={"/checkout"}
                     >
                         پرداخت
@@ -23,7 +23,7 @@ const Stepper = ({ step }: { step: string }) => {
                 <FaArrowLeftLong />
                 {step == "complete" ? (
                     <Link
-                        className={step == "complete" && styles.active_step}
+                        className={"" && styles.active_step}
                         href={"/complete"}
                     >
                         تکمیل سفارش

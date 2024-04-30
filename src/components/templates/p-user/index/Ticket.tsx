@@ -8,7 +8,7 @@ const Ticket = ({ _id, title, department, hasAnswer, createdAt }: ticketProps) =
     <Link href={`/p-user/tickets/answer/${_id}`} className={styles.ticket}>
       <div>
         <p>{title}</p>
-        <p className={styles.department}>{department.title}</p>
+        <p className={styles.department}>{department?.title}</p>
       </div>
       <div>
         <p>{new Date(createdAt).toLocaleDateString("fa-IR")}</p>

@@ -27,24 +27,24 @@ function sentTicket() {
       <div className={styles.content}>
         <div className={styles.group}>
           <label>دپارتمان را انتخاب کنید:</label>
-          <select onChange={event => setDepartmentID(event.target.value)}>
+          <select>
             <option value={-1}>لطفا دپارتمان را انتخاب نمایید</option>
 
             {departments.map((department) => (
-              <option key={department._id} value={department._id}>
-                {department.title}
+              <option key={"department._id"}>
+                {"department.title"}
               </option>
             ))}
           </select>
         </div>
         <div className={styles.group}>
           <label>نوع تیکت را انتخاب کنید:</label>
-          <select onChange={(event) => setSubDepartmentID(event.target.value)}>
+          <select>
             <option value={-1}>لطفا یک مورد را انتخاب نمایید</option>
 
             {subDepartments.map((subDepartment) => (
-              <option key={subDepartment._id} value={subDepartment._id}>
-                {subDepartment.title}{" "}
+              <option key={"subDepartment._id"}>
+                {"subDepartment.title"}{" "}
               </option>
             ))}
           </select>
@@ -60,7 +60,7 @@ function sentTicket() {
         </div>
         <div className={styles.group}>
           <label>سطح اولویت تیکت را انتخاب کنید:</label>
-          <select onChange={(event) => setPriority(event.target.value)}>
+          <select>
             <option value={-1}>لطفا یک مورد را انتخاب نمایید</option>
             <option value={1}>کم</option>
             <option value={2}>متوسط</option>

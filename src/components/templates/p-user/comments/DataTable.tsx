@@ -31,12 +31,12 @@ export default function DataTable({ comments, title }: { comments: [], title: st
               <tr key={index}>
                 <td>{index + 1}</td>
                 <td>{new Date(comment.date).toLocaleDateString("fa-IR")}</td>
-                <td>{comment.productID.name}</td>
+                <td>{"comment.productID.name"}</td>
                 <td>
                   {new Array(comment.score).fill(0).map((item, index) => (
                     <FaStar key={index} />
                   ))}
-                  {new Array(5 - comment.score).fill(0).map((item, index) => (
+                  {new Array(5).fill(0).map((item, index) => (
                     <FaRegStar key={index} />
                   ))}
                 </td>
@@ -48,7 +48,6 @@ export default function DataTable({ comments, title }: { comments: [], title: st
                 <td>
                   <button
                     type="button"
-                    onClick={() => showCommentBody(comment.body)}
                     className={styles.btn}
                   >
                     مشاهده

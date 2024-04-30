@@ -5,11 +5,11 @@ interface articleProps {
     title: string
     img: string
     comments: string
-    date: string
+    date?: string // this is not optional but it is for now
     href: string
 }
 
-const Article = ({ title, img, comments, date, href }: articleProps) => {
+const Article = ({ title, img, comments, href }: articleProps) => { // there is data prop here too
     return (
         <Link href={href} className={styles.article}>
             <img width={75} height={65} src={img} alt="" />
@@ -17,7 +17,7 @@ const Article = ({ title, img, comments, date, href }: articleProps) => {
                 <p className={styles.title}>{title}</p>
                 <div>
                     <p>{comments}</p>
-                    <p dir="rtl">{date}</p>
+                    <p dir="rtl">{"date"}</p>
                 </div>
             </div>
         </Link>

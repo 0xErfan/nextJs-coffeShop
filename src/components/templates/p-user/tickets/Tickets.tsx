@@ -46,7 +46,8 @@ function Tickets({ tickets }: { tickets: [] }) {
 
       <div>
         {tickets.map((ticket: { [key: string]: string | number }) => (
-          <Ticket key={ticket._id} {...ticket} />
+          // <Ticket key={"ticket._id"} {...ticket} />
+          <div>this is ticket ((:</div>
         ))}
       </div>
 

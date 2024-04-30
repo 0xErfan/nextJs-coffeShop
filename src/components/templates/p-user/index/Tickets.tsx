@@ -3,7 +3,7 @@ import styles from "./tickets.module.css";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 
-const Tickets = ({ tickets }: { tickets: { [key: string]: string }[] }) => {
+const Tickets = ({ tickets }: { tickets: [] }) => {
   return (
     <div className={styles.content}>
       <div className={styles.content_details}>
@@ -13,8 +13,9 @@ const Tickets = ({ tickets }: { tickets: { [key: string]: string }[] }) => {
         </Link>
       </div>
 
-      {tickets.map((ticket) => (
-        <Ticket key={ticket._id} {...ticket} />
+      {tickets.map((ticket: {}) => (
+        // <Ticket key={"ticket._id"} {...ticket} />
+        <div>hi just for test</div>
       ))}
 
       {/* <p className={styles.empty}>تیکتی ثبت نشده</p> */}

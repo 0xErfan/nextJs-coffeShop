@@ -10,20 +10,21 @@ interface commentProps {
 const Comments = ({ productID, comments }: commentProps) => {
   return (
     <div>
-      <p>نظرات ({comments.filter((comment) => comment.isAccept).length}) :</p>
+      <p>نظرات (23) :</p>
       <hr />
 
       <main className={styles.comments}>
         <div className={styles.user_comments}>
           <p className={styles.title}>
-            {comments.filter((comment) => comment.isAccept).length}
+            {"12"}
             دیدگاه برای کپسول قهوه SETPRESSO سازگار با دستگاه نسپرسو ( GOLD ) ده
             -10- عددی
           </p>
           <div>
             {comments.map(
               (comment) =>
-                comment.isAccept && <Comment key={comment._id} {...comment} />
+              <div>this is commet (:</div>
+                // "comment.isAccept" && <Comment key={"comment._id"} {...comment} />
             )}
           </div>
         </div>

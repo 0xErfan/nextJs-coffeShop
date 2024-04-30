@@ -5,7 +5,7 @@ export interface ticketProps {
   _id: number
   title: string
   createdAt: string
-  department: { [key: string]: string }
+  department?: { [key: string]: string }
   hasAnswer: boolean
 }
 
@@ -14,7 +14,7 @@ const Ticket = ({ _id, title, createdAt, department, hasAnswer }: ticketProps) =
     <Link href={`/p-user/tickets/answer/${_id}`} className={styles.ticket}>
       <div>
         <p>{title}</p>
-        <p className={styles.department}>{department.title}</p>
+        <p className={styles.department}>{department?.title}</p>
       </div>
       <div>
         <p>{new Date(createdAt).toLocaleDateString("fa-IR")}</p>

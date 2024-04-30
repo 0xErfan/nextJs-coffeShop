@@ -10,8 +10,6 @@ const Register = ({ showloginForm }: { showloginForm: () => void }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const signUp = async () => { };
-
     return (
         <>
             <div className={styles.form}>
@@ -51,7 +49,7 @@ const Register = ({ showloginForm }: { showloginForm: () => void }) => {
                     style={{ marginTop: ".7rem" }}
                     onClick={() => {
                         if (isRegisterWithPass) {
-                            signUp();
+                            // signUp();
                         } else {
                             setIsRegisterWithPass(true);
                         }

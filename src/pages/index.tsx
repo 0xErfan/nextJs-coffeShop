@@ -5,11 +5,11 @@ import Banner from "@/components/templates/index/banner/Banner";
 import Latest from "@/components/templates/index/latest/Latest";
 import Promote from "@/components/templates/index/promote/Promote";
 
-export default async function Home() {
+export default function Home() {
 
     return (
         <>
-            <Navbar isLogin={"user" ? true : false} />
+            <Navbar />
             <Banner />
             {/* <Latest products={JSON.parse(JSON.stringify(latestProducts))} /> */}
             <Promote />

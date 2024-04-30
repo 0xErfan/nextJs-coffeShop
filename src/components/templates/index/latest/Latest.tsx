@@ -17,7 +17,8 @@ const Latest = ({ products }: { products: [] }) => {
       </section>
       <main data-aos="fade-up" className={styles.products}>
         {products.map((product) => (
-          <Product key={"product._id"} {...product} />
+          // <Product key={"product._id"} {...product} />
+          <div>This is product (:</div>
         ))}
       </main>
     </div>

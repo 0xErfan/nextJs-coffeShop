@@ -17,10 +17,10 @@ const Gallery = () => {
   return (
     <section style={{ width: "36%" }}>
       <Swiper
-        style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-        }}
+        // style={{
+        //   "--swiper-navigation-color": "#fff",
+        //   "--swiper-pagination-color": "#fff",
+        // }}
         spaceBetween={10}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
